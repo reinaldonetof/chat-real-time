@@ -17,7 +17,7 @@ app.use("/", (req, res) => {
 let messages = [];
 
 io.on("connection", (socket) => {
-  console.log(`socket conectado: ${socket.id}`);
+  console.log(socket);
 
   socket.on("sendMessage", (data) => {
     messages.push(data);
